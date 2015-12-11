@@ -1,1 +1,92 @@
-body{background: orange}
+*{padding: 0;margin: 0}
+body{font-family: "微软雅黑", sans-serif}
+img{border: none}
+ul,li{
+    list-style: none;
+}
+/*头部区域开始*/
+#header{
+    width: 1210px;
+    height: 150px;
+    margin: 0 auto;
+    position: relative;
+}
+#header .logo{
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+#header .explain{
+    position: absolute;
+    left: 261px;
+    top: 61px;
+}
+#header .explain a.list1{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#header .explain a.list2{
+    position: absolute;
+    left: 85px;
+    top: 0;
+}
+#header .explain a.list3{
+    position: absolute;
+    left: 168px;
+    top: 0;
+}
+#header .phone-nub{
+    position: absolute;
+    right: 0px;
+    top:50px;
+}
+#tooltip{padding: 1px;position: absolute;display: none;background: #ffffff;}
+/*头部区域结束*/
+
+/*导航条开始*/
+.nav-background{
+    width: 100%;
+    height: 50px;
+    background: #3c3c3c;
+}
+#nav{
+    width: 1210px;
+    margin: 0 auto;
+    position: relative;
+}
+#nav ul{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #3c3c3c;
+}
+#nav ul li{
+    color: #FFF;
+    float: left;
+    padding: 0 10px;
+    cursor:pointer;
+}
+#nav ul li:hover{
+    background: #101010;
+}
+#nav-div2{
+    display: none;
+    height: 0;
+    border:solid 1px #a9a9a9 ;
+    background: #F9AF2A;
+    border-top:0 ;
+    cursor: pointer;
+}
+#nav-div2 a{
+    text-decoration: none;
+    color: darkred;
+}
+/*导航条结束*/
+
+
+/*默认的全局使用样式*/
+a{
+    text-decoration: none;
+    color: #FFF;
+}
