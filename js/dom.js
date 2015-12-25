@@ -205,6 +205,7 @@ Tool.prototype = {//方法是定义在Tool的prototype上的；
                     curEle["style"][attr] = value;
                     break;
                 default:
+                    //curEle["style"][attr] =  value+='px';
                     curEle["style"][attr] = !isNaN(value) ? value += "px" : value;
             }
         }

@@ -44,25 +44,26 @@ function goodE(e){
     }
     return e;
 }
+//header区域结束
 
-//下面是导航条区域的JS文件
+//导航条区域开始
 var navNav = document.getElementById("nav-div2");
+var nav = document.getElementById("nav");
+var contactInformation = document.getElementById("contactInformation");
+var contact = document.getElementById("contact");
 document.onmouseover = function (e) {
     e = e || window.event;//处理事件兼容性；
     var tar = e.target || e.srcElement;//事件源；
     var ch = dom.setCss(navNav,"height");
     var broszhu = tar.getAttribute("broszhu");//监听的对象；
     if (broszhu === "true") {//以属性来判断；
-        navNav.style.display="block";
         if (ch <= 200) {
             move.call(navNav, 200);
+            navNav.style.display="block";
         }
     } else {
         if (ch > 0) {
             move.call(navNav, 0);
-        }
-        if(navNav.style.lineHeight=''){
-            navNav.style.display="none";
         }
     }
 };
@@ -76,14 +77,17 @@ function move(target) {
         that.timer = setTimeout(_move, 10);
         if (start >= target) {
             dom.setCss(that, "height", start - 10);
-            if (start - 10 < target) {
+            if (start - 10 <= target) {
                 dom.setCss(that, "height", target);
+                navNav.style.display="none";
+                clearTimeout(that.timer);
                 return;
             }
         } else if (start < target) {
             dom.setCss(that,"height", start + 10);
             if (start + 10 >= target) {
                 dom.setCss(that, "height", target);
+                clearTimeout(that.timer);
                 return;
             }
         } else {
@@ -91,6 +95,7 @@ function move(target) {
         }
     }
 }
-
-
-
+//下面是导航条上的联系方式
+contact.onmouseover=function(){contactInformation.style.display="block";};
+contact.onmouseout=function(){contactInformation.style.display="none";};
+//导航条区域结束

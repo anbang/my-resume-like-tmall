@@ -8,8 +8,9 @@ ul,li{
 #header{
     width: 1210px;
     height: 150px;
-    margin: 0 auto;
     position: relative;
+    left: 50%;
+    margin-left: -605px;
 }
 #header .logo{
     position: absolute;
@@ -49,11 +50,16 @@ ul,li{
     width: 100%;
     height: 50px;
     background: #3c3c3c;
+    position: relative;
+    z-index: 2;
 }
 #nav{
     width: 1210px;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
+    left: 50%;
+    margin-left: -605px;
+    z-index: 2;
 }
 #nav ul{
     width: 100%;
@@ -67,26 +73,83 @@ ul,li{
     padding: 0 10px;
     cursor:pointer;
 }
+#nav ul li a{
+    color: #FFF;
+}
 #nav ul li:hover{
     background: #101010;
 }
 #nav-div2{
-    display: none;
+    position: absolute;
     height: 0;
+    width: 100%;
     border:solid 1px #a9a9a9 ;
+    border-top: none;
+    border-bottom: none;
     background: #F9AF2A;
-    border-top:0 ;
     cursor: pointer;
+    display: none;
+    overflow: hidden;
+    z-index: 2;
 }
 #nav-div2 a{
+    position: relative;
+    top: 20px;
     text-decoration: none;
     color: darkred;
+    margin: 20px;
+    border: 1px solid #F9AF2A;
+}
+#nav-div2 a:hover{
+    text-decoration: none;
+    color: #FFF;
+    border: 1px solid darkred;
+    background:darkred ;
+}
+
+#nav #contactInformation{
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    left: 210px;
+    display: none;
+}
+#nav #contactInformation a{
+    width: 200px;
+    height: 50px;
+    display: block;
+    text-align: left;
+    line-height: 50px;
+    font-size:18px;
+    padding-left: 10px;
+}
+#nav #contactInformation a.phone{
+    background:#2f2123;
+    color: #c54337;
+}
+#nav #contactInformation a.email{
+    background:#312e1f;
+    color: #fdbd1f;
+}
+#nav #contactInformation a.advice{
+    background:#162e2e;
+    color: #1bbc9b;
 }
 /*导航条结束*/
+/*商品展示区域开始*/
+#myDisplay{
+    width: 1210px;
+    height: 630px;
+    position: relative;
+    left: 50%;
+    top: 38px;
+    margin-left: -605px;
+    border: 1px solid red;
+}
+/*商品展示区域结束*/
 
 
 /*默认的全局使用样式*/
 a{
     text-decoration: none;
-    color: #FFF;
 }
