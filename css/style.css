@@ -89,7 +89,6 @@ ul,li{
     background: #F9AF2A;
     cursor: pointer;
     display: none;
-    overflow: hidden;
     z-index: 2;
 }
 #nav-div2 a{
@@ -115,7 +114,7 @@ ul,li{
     display: none;
 }
 #nav #contactInformation a{
-    width: 200px;
+    width: 220px;
     height: 50px;
     display: block;
     text-align: left;
@@ -124,16 +123,16 @@ ul,li{
     padding-left: 10px;
 }
 #nav #contactInformation a.phone{
-    background:#2f2123;
-    color: #c54337;
+    background:#162e2e;
+    color: #1bbc9b;
 }
 #nav #contactInformation a.email{
     background:#312e1f;
     color: #fdbd1f;
 }
 #nav #contactInformation a.advice{
-    background:#162e2e;
-    color: #1bbc9b;
+    background:#2f2123;
+    color: #c54337;
 }
 /*导航条结束*/
 /*商品展示区域开始*/
@@ -141,15 +140,63 @@ ul,li{
     width: 1210px;
     height: 630px;
     position: relative;
+    margin-top: 38px;
     left: 50%;
-    top: 38px;
     margin-left: -605px;
-    border: 1px solid red;
+}
+#myDisplay #displayHeader{
+    position: absolute;
+    top: 460px;
+}
+#myDisplay #displayHeader li{
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-right: 12px;
+    background: lightseagreen;
+    cursor: pointer;
+}
+#myDisplay #displayBody li{
+    width: 449px;
+    height: 449px;
+    display: none;
+    position: relative;
+}
+#myDisplay #displayBody li.select{
+    width: 449px;
+    height: 449px;
+    display: block;
+}
+/*放大镜效果的布局*/
+#tab {  position: relative;  width: 450px;  height: 450px; background: #CDE074;  z-index: 2;}
+#mark {  position: absolute;  top: 0;  left: 0;  width: 140px;  height: 140px;  background: #B00000;  opacity: 0.5;  filter: alpha(opacity=50);  cursor: move;  }
+#container{ position:absolute; height:450px; width:450px; background:pink; overflow:hidden;left: 480px;top: 0px;z-index: 2;}
+#bigImg{ position:absolute; display:block; border:none;}
+/*商品展示右侧区域*/
+#myDisplay .right{
+    position: absolute;
+    left: 500px;
+    top: 19px;
+}
+#myDisplay .right .title span{
+    position: absolute;
+    top: 34px;
+    font-family: "Arial";
+    font-size: 12px;
+    color: #c40000;
+}
+#myDisplay .right .price{
+    position: absolute;
+    top: 109px;
 }
 /*商品展示区域结束*/
+
 
 
 /*默认的全局使用样式*/
 a{
     text-decoration: none;
+}
+.clear{
+    clear: both;
 }

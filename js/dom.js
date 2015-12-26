@@ -10,7 +10,7 @@ Tool.prototype = {//方法是定义在Tool的prototype上的；
         var context = context || document;
         var ary = [];
         if (this.flag) {
-            return this.listToArray(context.getElementsByClassName(cName));
+            return context.getElementsByClassName(cName);
         }
         var allNode = context.getElementsByTagName("*");
         var reg = new RegExp("(?:^| +)" + cName + "(?: +|$)");

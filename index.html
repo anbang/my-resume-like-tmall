@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>用原生JS写的一套WEB前端的简历，兼容到IE5678，优雅降级</title>
     <link rel="stylesheet" href="./css/style.css"/>
 </head>
 <body>
@@ -35,18 +35,56 @@
             <a href="http://broszhu.com/%E8%BF%9C%E7%A8%8B%E8%BF%90%E8%90%A5%E6%96%87%E7%AB%A0" target="_blank" broszhu="true">运营DEMO</a>
         </div>
         <div id="contactInformation">
-            <a href="javascript:;" class="phone">电话：18105560056</a>
+            <a href="javascript:;" class="advice">博客：taobao.fm</a>
             <a href="javascript:;" class="email">邮箱：ooxx@zhu.me</a>
+            <a href="javascript:;" class="phone">电话：180-1234-1234</a>
         </div>
     </div>
 </div>
 <!--导航条结束-->
+
 <!--商品展示区域开始-->
 <div id="myDisplay">
+    <div class="left">
+        <ul id="displayHeader">
+            <li class="select"><img src="img/li1.jpg" alt=""/></li>
+            <li class=""><img src="img/li2.jpg" alt=""/></li>
+            <li class=""><img src="img/li3.jpg" alt=""/></li>
+            <li class=""><img src="img/li4.jpg" alt=""/></li>
+            <li class=""><img src="img/li5.jpg" alt=""/></li>
+        </ul>
+        <ul id="displayBody">
+            <li id="tab"  class="select">
+                <img src="img/smallPeony.jpg"  id="img1">
+<!--                <div id="container">
+                    <img src="img/peony.jpg" alt="" id="bigImg"/>
+                </div>
+                <div id="mark"></div>-->
+            </li>
+            <li class="" id="toMove2"><img src="img/myphoto2.jpg" alt="我的图片第2张"/></li>
+            <li class="" id="toMove3"><img src="img/myphoto3.jpg" alt="我的图片第3张"/></li>
+            <li class="" id="toMove4"><img src="img/myphoto4.jpg" alt="我的图片第4张"/></li>
+            <li class="" id="toMove5"><img src="img/myphoto5.jpg" alt="我的图片第5张"/></li>
+        </ul>
+    </div>
+    <div class="right">
+        <div class="title">
+            <p>前端开发 JavaScript基础扎实 有nodejs开发经验 / 设计经验 / 电商运营经验</p>
+            <span>香港直发 原装正品 新张巨惠 好评返现50元</span>
+        </div>
+        <div class="price">
+            <p>价格</p>
+            <div id="rent">
+                <span>/月租金</span>
+                <a href="javascripy:;">?</a>
+            </div>
+        </div>
+    </div>
 
 </div>
 <!--商品展示区域结束-->
 </body>
 </html>
 <script src="js/dom.js"></script>
+<script src="js/starMove.js"></script>
 <script src="js/index.js"></script>
