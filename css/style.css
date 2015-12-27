@@ -1,5 +1,5 @@
 *{padding: 0;margin: 0}
-body{font-family: "微软雅黑", sans-serif}
+body{font-family: "微软雅黑", sans-serif;-webkit-user-select: none;}
 img{border: none}
 ul,li{
     list-style: none;
@@ -168,7 +168,7 @@ ul,li{
     display: block;
 }
 /*放大镜效果的布局*/
-#tab {  position: relative;  width: 450px;  height: 450px; background: #CDE074;  z-index: 2;}
+#tab {  position: relative;  width: 450px;  height: 450px; background: #CDE074;  z-index: 1;}
 #mark {  position: absolute;  top: 0;  left: 0;  width: 140px;  height: 140px;  background: #B00000;  opacity: 0.5;  filter: alpha(opacity=50);  cursor: move;  }
 #container{ position:absolute; height:450px; width:450px; background:pink; overflow:hidden;left: 480px;top: 0px;z-index: 2;}
 #bigImg{ position:absolute; display:block; border:none;}
@@ -176,7 +176,12 @@ ul,li{
 #myDisplay .right{
     position: absolute;
     left: 500px;
+    top: 0;
+}
+#myDisplay .right .title{
+    position: absolute;
     top: 19px;
+    width: 710px;
 }
 #myDisplay .right .title span{
     position: absolute;
@@ -188,6 +193,183 @@ ul,li{
 #myDisplay .right .price{
     position: absolute;
     top: 109px;
+    width: 710px;
+    height: 98px;
+    border-bottom: 1px solid #eeeeee;
+}
+#myDisplay .right .price .xiaoxi1{
+    display: none;
+    position: absolute;
+    top:0;
+    left: 300px;
+    width:333px;
+    height:26px;
+    line-height: 26px;
+    background: url("../img/xiaoxikuang1.jpg") no-repeat 0 0 ;
+    padding-left: 10px;
+}
+#myDisplay .right .price .mall-price{
+    position: absolute;
+    top: 9px;
+    left: 0;
+}
+#myDisplay .right .price .price-number{
+    position: absolute;
+    left: 55px;
+    top: -10px;
+    color: #c40000;
+}
+#myDisplay .right .price .price-number b{
+    font-size: 32px;
+}
+#myDisplay .right .price #rent{
+    position: absolute;
+    left: 224px;
+    top: 7px;
+}
+#myDisplay .right .price .location{
+    position: absolute;
+    left: 0px;
+    top: 47px;
+}
+#myDisplay .right .price .location .city{
+    position: absolute;
+    left: 71px;
+    top: 0;
+    display: block;
+    width: 110px;
+    height: 16px;
+    font-size: 12px;
+    background: #c40000;
+    text-align: center;
+    line-height: 16px;
+    color: #FFF;
+}
+#myDisplay .right .deliver-goods{
+    position: absolute;
+    top: 207px;
+    border-bottom: 1px solid #eeeeee;
+    width: 710px;
+    height: 100px;
+}
+#myDisplay .right .deliver-goods .one{
+    position: absolute;
+    top: 26px;
+    width: 700px;
+    height: 16px;
+    line-height: 16px;
+}
+#myDisplay .right .deliver-goods .one .destination div{
+    float: left;
+    margin-right: 5px;
+}
+#myDisplay .right .deliver-goods .one .destination #distributionTime #xiaoxi2{
+    display: none;
+    position: absolute;
+    top:18px;
+    left: -82px;
+    width:219px;
+    height:31px;
+    text-align: center;
+    line-height: 36px;
+    background: url("../img/xiaoxikuang2.png") no-repeat 0 0 ;
+}
+#myDisplay .right .deliver-goods .two{
+    position: absolute;
+    top: 63px;
+    width: 300px;
+}
+#myDisplay .right .buy{
+    width: 710px;
+    height: 240px;
+    position: absolute;
+    top: 307px;
+
+}
+#myDisplay .right .buy .one{
+    position: absolute;
+    top: 26px;
+
+}
+#myDisplay .right .buy .one .introduces{
+    position: absolute;
+    top: 7px;
+    width: 40px;
+}
+#myDisplay .right .buy .one .web{
+    width: 138px;
+    height: 23px;
+    border: 2px solid #863177;
+    text-align: center;
+    line-height: 23px;
+    cursor: pointer;
+}
+#myDisplay .right .buy .one .web img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#myDisplay .right .buy .two{
+    position: absolute;
+    top: 77px;
+}
+#myDisplay .right .buy .two {
+    position: absolute;
+    top: 77px;
+}
+#myDisplay .right .buy .two .introduces{
+    position: absolute;
+    top: 7px;
+    width: 40px;
+}
+#myDisplay .right .buy .two #mallNum span{
+    float: left;
+}
+#myDisplay .right .buy .two #mallNum .mallNumStyle{
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #d9d9d9;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+}
+#myDisplay .right .buy .two #mallNum .content{
+    width: 38px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border-top:1px solid #d9d9d9;
+    border-bottom:1px solid #d9d9d9;
+}
+#myDisplay .right .buy .three{
+    position: absolute;
+    top: 135px;
+}
+#myDisplay .right .buy .three .flag{
+    color: #c40000;
+    word-break:keep-all;           /* 不换行 */
+    white-space:nowrap;          /* 不换行 */
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+#myDisplay .right .buyNowdiv{
+    position: absolute;
+    top: 480px;
+    width: 400px;
+}
+.buyNow{
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: #FFF;
+    background:#c40000 ;
+}
+.buyNow:hover{
+    background:#d90000;
 }
 /*商品展示区域结束*/
 
@@ -199,4 +381,37 @@ a{
 }
 .clear{
     clear: both;
+}
+.introduces{
+    font-size: 12px;
+    color: #999999;
+}
+/*下面是商品详情页的附加字样式*/
+.blue-font{
+    font-size: 12px;
+    color: #6388cc;
+    position: relative;
+    cursor: pointer;
+}
+.blue-font a{
+    width: 12px;
+    text-align: center;
+    height: 12px;
+    line-height: 12px;
+    display: block;
+    background: #6388cc;
+    color: #FFF;
+    font-size: 10px;
+    position: absolute;
+    top: 2px;
+    left: 58px;
+}
+.little-font{
+    font-size: 12px;
+}
+.right-right{
+    position: absolute;
+    top: 0;
+    left: 54px;
+    width: 600px;
 }

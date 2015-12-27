@@ -237,4 +237,35 @@ function offset() {
 function getWin(attr) {
     return document.documentElement[attr] || document.body[attr];
 }
+//省市区三级
+addressInit('province', 'city', 'area', '上海', '市辖区', '浦东新区');
+//鼠标悬停提示
+var rent=document.getElementById("rent");
+var distributionTime=document.getElementById("distributionTime");
+var xiaoxi1=document.getElementById("xiaoxi1");
+var xiaoxi2=document.getElementById("xiaoxi2");
+rent.onmouseover=function(){show(xiaoxi1)};
+rent.onmouseout=function(){none(xiaoxi1)};
+distributionTime.onmouseover=function(){show(xiaoxi2)};
+distributionTime.onmouseout=function(){none(xiaoxi2)};
+function show(ele){
+    ele.style.display="block";
+};
+function none(ele){
+    ele.style.display="none";
+}
+//商品数量增加
+var mallNum=document.getElementById("mallNum");
+var flag=document.getElementById("flag");
+var reduce=dom.getElementsByClassName(mallNum,"reduce")[0];
+var plus=dom.getElementsByClassName(mallNum,"plus")[0];
+var content=dom.getElementsByClassName(mallNum,"content")[0];
+reduce.onclick=function() {
+    if(content.innerText<2) return
+    content.innerText--;
+};
+plus.onclick=function(){
+    content.innerText++;
+    flag.className="right-right flag";
+};
 //商品介绍区域结束

@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>用原生JS写的一套WEB前端的简历，兼容到IE5678，优雅降级</title>
+    <title>我用原生JS写的一套电子商务风格的WEB前端简历，兼容到了IE56789，使用了优雅降级,按需加载等方案；分享给大家，欢迎star！</title>
     <link rel="stylesheet" href="./css/style.css"/>
 </head>
 <body>
@@ -10,9 +10,9 @@
 <div id="header">
     <a href="#" class="logo"><img src="./img/logo.jpg" alt=""/></a>
     <div class="explain" id="explain">
-        <a href="./img/onmouseover.jpg" class="header-list list1"><img src="./img/shanghai.gif" alt=""/></a>
-        <a href="./img/onmouseover.jpg" class="header-list list2"><img src="./img/qianduan.gif" alt=""/></a>
-        <a href="./img/onmouseover.jpg" class="header-list list3"><img src="./img/gongzi.gif" alt=""/></a>
+        <a href="./img/onmouseover1.jpg" class="header-list list1"><img src="./img/shanghai.gif" alt=""/></a>
+        <a href="./img/onmouseover2.jpg" class="header-list list2"><img src="./img/qianduan.gif" alt=""/></a>
+        <a href="./img/onmouseover3.jpg" class="header-list list3"><img src="./img/gongzi.gif" alt=""/></a>
     </div>
     <a href="" class="phone-nub"><img src="./img/phoneNumber.gif" alt=""/></a>
 </div>
@@ -69,15 +69,67 @@
     </div>
     <div class="right">
         <div class="title">
-            <p>前端开发 JavaScript基础扎实 有nodejs开发经验 / 设计经验 / 电商运营经验</p>
-            <span>香港直发 原装正品 新张巨惠 好评返现50元</span>
+            <p>WEB前端开发 JavaScript基础扎实 有nodejs开发经验 / 平面设计经验 / 电子商务运营经验</p>
+            <span>目标公司类型：电子商务型公司（平台型）,或者电商行业的第三方服务商</span>
         </div>
         <div class="price">
-            <p>价格</p>
-            <div id="rent">
-                <span>/月租金</span>
+            <p class="introduces mall-price">价格</p>
+            <div class="price-number">¥<b>12000.00</b></div>
+            <div id="rent" class="blue-font">
+                /每月租金
                 <a href="javascripy:;">?</a>
             </div>
+            <div class="introduces xiaoxi1" id="xiaoxi1">此费用为商品的每月租金,使用时请按时续费。</div>
+            <div class="location">
+                <p class="introduces">商品所在地</p>
+                <p href="javascripy:;"  class="city">安庆市 · 宿松县城</p>
+            </div>
+        </div>
+        <div class="deliver-goods">
+            <div class="one">
+                <p class="introduces">配送</p>
+                <div class="destination right-right">
+                    <div class="little-font">安庆</div>
+                    <div class="introduces">至</div>
+                    <div class="province">
+                        <select id="province"></select>
+                        <select id="city"></select>
+                        <select id="area"></select>
+                    </div>
+                    <div class="little-font">有货</div>
+                    <div id="distributionTime" class="blue-font">
+                        /配送时间
+                        <a href="javascripy:;">?</a>
+                        <div class="introduces" id="xiaoxi2">约定时间发货，如有意外，会提前通知</div>
+                    </div>
+                </div>
+            </div>
+            <div class="two">
+                <a class="introduces">运费</a>
+                <div class="little-font right-right">免运费　(安庆以外地区不发货)</div>
+            </div>
+        </div>
+        <div class="buy">
+            <div class="one">
+                <p class="introduces">属性</p>
+                <p class="web right-right">WEB前端开发 <img src="./img/dui.png" alt=""/></p>
+            </div>
+            <div class="two">
+                <p class="introduces">数量</p>
+                <div id="mallNum" class="right-right">
+                    <span class="reduce mallNumStyle">-</span>
+                    <span class="content">1</span>
+                    <span class="plus mallNumStyle">+</span>
+                </div>
+            </div>
+            <div class="three introduces">
+                <p class="introduces">备注</p>
+                <p class="right-right" id="flag">促销商品，仅一件，多拍不发货！</p>
+            </div>
+            <div class="four"></div>
+        </div>
+        <div class="buyNowdiv">
+            <a href="javascript:;" class="buyNow">立即购买</a>
         </div>
     </div>
 
@@ -86,5 +138,5 @@
 </body>
 </html>
 <script src="js/dom.js"></script>
-<script src="js/starMove.js"></script>
+<script src="js/jsAddress.js"></script>
 <script src="js/index.js"></script>
