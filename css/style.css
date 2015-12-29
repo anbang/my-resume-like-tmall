@@ -8,9 +8,6 @@ ul,li{
 #header{
     width: 1210px;
     height: 150px;
-    position: relative;
-    left: 50%;
-    margin-left: -605px;
 }
 #header .logo{
     position: absolute;
@@ -55,10 +52,6 @@ ul,li{
 }
 #nav{
     width: 1210px;
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    margin-left: -605px;
     z-index: 2;
 }
 #nav ul{
@@ -139,10 +132,7 @@ ul,li{
 #myDisplay{
     width: 1210px;
     height: 630px;
-    position: relative;
     margin-top: 38px;
-    left: 50%;
-    margin-left: -605px;
 }
 #myDisplay #displayHeader{
     position: absolute;
@@ -373,11 +363,139 @@ ul,li{
 }
 /*商品展示区域结束*/
 
+/*第二个导航条开始*/
+#twoNav{
+    width: 1210px;
+    height: 57px;
+    border-bottom: 3px solid #34383b;
+}
+#twoNav .nav{
+    display: block;
+    width: 96px;
+    height: 57px;
+    text-align: center;
+    line-height: 58px;
+    float: left;
+}
+#twoNav .select{
+    background:#34383b;
+    color: #FFF;
+}
+#twoNav .nav:hover{
+    background:#34383b;
+    color: #FFF;
+}
+#twoNav .buyNowdiv{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#twoNav .simple{
+    position: absolute;
+    left: 706px;
+    top: 29px;
+}
+#twoNav .simple .position span{
+    margin-right: 32px;
+}
+#twoNav .simple .wage{
+    position: absolute;
+    left: 162px;
+    top: 0;
+}
+#twoNav .simple .wage .price{
+    font-size: 30px;
+    position: absolute;
+    top: -18px;
+    left: 5px;
+    color: #666666;
+}
+/*第二个导航条结束*/
+/*个人简介和技能书区域开始*/
+#introduces{
+    width: 1210px;
+    height: 658px;
+    padding-top: 10px;
+}
+#introduces .left{
+    width: 594px;
+    height: 657px;
+    background: #8c0000;
+}
+#introduces .code-dog{
+    position: absolute;
+    left: 63px;
+    top: 45px;
+}
+#introduces .information{
+    position: absolute;
+    left: 302px;
+    top: 45px;
+}
+#introduces .left ul{
+    position: absolute;
+    left: 63px;
+    top: 201px;
+    width: 470px;
+    height: 300px;
+}
+#introduces .left ul li{
+    width: 470px;
+    height: 59px;
+    border-bottom: 1px solid #a9a9a9;
+    position: relative;
+}
+
+#introduces .left ul li div{
+    width: 59px;
+    height: 59px;
+}
+#introduces .left ul li .user{background: url("../img/ico.png") no-repeat 0 0;}
+#introduces .left ul li .local{background: url("../img/ico.png") no-repeat -59px 0;}
+#introduces .left ul li .edu{background: url("../img/ico.png") no-repeat -118px 0;}
+#introduces .left ul li .work{background: url("../img/ico.png") no-repeat -177px 0;}
+#introduces .left ul li .marry{background: url("../img/ico.png") no-repeat -236px 0;}
+#introduces .left ul li p{
+    position: absolute;
+    left: 75px;
+    top: 0;
+    line-height:59px ;
+    color: #FFF;
+}
+#introduces .left .github{
+    position: absolute;
+    top: 548px;
+    left: 63px;
+    width: 193px;
+    height: 60px;
+    background: url("../img/github.png");
+}
+#introduces .left .select-github:hover{background: url("../img/github-select.png");}
+#introduces .left .select-blog:hover{background: url("../img/blog-select.png");}
+#introduces .left .blog{
+    position: absolute;
+    top: 548px;
+    left: 340px;
+    width: 193px;
+    height: 60px;
+    background: url("../img/blog.png");
+}
+
+#introduces .right{
+    width: 606px;
+    height: 657px;
+    border: 1px solid blue;
+    position: absolute;
+    top: 10px;
+    left: 604px;
+}
+/*个人简介和技能书区域结束*/
 
 
 /*默认的全局使用样式*/
 a{
     text-decoration: none;
+    color: #000;
 }
 .clear{
     clear: both;
@@ -414,4 +532,10 @@ a{
     top: 0;
     left: 54px;
     width: 600px;
+}
+/*兼容的居中布局*/
+.middle{
+    position: relative;
+    left: 50%;
+    margin-left: -605px;
 }

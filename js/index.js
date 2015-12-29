@@ -261,8 +261,11 @@ var reduce=dom.getElementsByClassName(mallNum,"reduce")[0];
 var plus=dom.getElementsByClassName(mallNum,"plus")[0];
 var content=dom.getElementsByClassName(mallNum,"content")[0];
 reduce.onclick=function() {
-    if(content.innerText<2) return
+    if(content.innerText<2) return;
     content.innerText--;
+    if(content.innerText==1){
+        flag.className="right-right";
+    };
 };
 plus.onclick=function(){
     content.innerText++;
