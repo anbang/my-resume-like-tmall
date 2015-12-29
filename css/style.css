@@ -159,7 +159,12 @@ ul,li{
 }
 /*放大镜效果的布局*/
 #tab {  position: relative;  width: 450px;  height: 450px; background: #CDE074;  z-index: 1;}
-#mark {  position: absolute;  top: 0;  left: 0;  width: 140px;  height: 140px;  background: #B00000;  opacity: 0.5;  filter: alpha(opacity=50);  cursor: move;  }
+#mark {  position: absolute;  top: 0;  left: 0;  width: 140px;  height: 140px;
+    /*用图片会导致没有直接用颜色，在标准浏览器体验好;但是用这个，在加上边框可以兼容到低版本IE*/
+    background: url("../img/mark.png");
+    /*background:#c40000;*/
+    border: 1px solid #c40000 ;
+    opacity: 0.5;  filter: alpha(opacity=50);  cursor: move;  }
 #container{ position:absolute; height:450px; width:450px; background:pink; overflow:hidden;left: 480px;top: 0px;z-index: 2;}
 #bigImg{ position:absolute; display:block; border:none;}
 /*商品展示右侧区域*/
@@ -232,7 +237,7 @@ ul,li{
     font-size: 12px;
     background: #c40000;
     text-align: center;
-    line-height: 16px;
+    padding-top: 0px;
     color: #FFF;
 }
 #myDisplay .right .deliver-goods{
@@ -451,10 +456,10 @@ ul,li{
     height: 59px;
 }
 #introduces .left ul li .user{background: url("../img/ico.png") no-repeat 0 0;}
-#introduces .left ul li .local{background: url("../img/ico.png") no-repeat -59px 0;}
-#introduces .left ul li .edu{background: url("../img/ico.png") no-repeat -118px 0;}
-#introduces .left ul li .work{background: url("../img/ico.png") no-repeat -177px 0;}
-#introduces .left ul li .marry{background: url("../img/ico.png") no-repeat -236px 0;}
+#introduces .left ul li .local{background: url("../img/ico.png") no-repeat -236px 0;}
+#introduces .left ul li .edu{background: url("../img/ico.png") no-repeat -177px  0;}
+#introduces .left ul li .work{background: url("../img/ico.png") no-repeat -59px 0;}
+#introduces .left ul li .marry{background: url("../img/ico.png") no-repeat  -118px 0;}
 #introduces .left ul li p{
     position: absolute;
     left: 75px;
@@ -468,28 +473,62 @@ ul,li{
     left: 63px;
     width: 193px;
     height: 60px;
-    background: url("../img/github.png");
+    background: url("../img/github.jpg");
 }
-#introduces .left .select-github:hover{background: url("../img/github-select.png");}
-#introduces .left .select-blog:hover{background: url("../img/blog-select.png");}
 #introduces .left .blog{
     position: absolute;
     top: 548px;
     left: 340px;
     width: 193px;
     height: 60px;
-    background: url("../img/blog.png");
+    background: url("../img/blog.jpg");
 }
+#introduces .left .select-github:hover{background: url("../img/github-select.jpg");}
+#introduces .left .select-blog:hover{background: url("../img/blog-select.jpg");}
 
 #introduces .right{
     width: 606px;
     height: 657px;
-    border: 1px solid blue;
     position: absolute;
     top: 10px;
     left: 604px;
 }
+#introduces .right p{
+    width: 606px;
+    height: 50px;
+    background: #3c3c3c;
+    line-height: 50px;
+    text-indent: 11px;
+    color: #FFF;
+    font-size: 24px;
+}
+#introduces .right ul{
+    width: 606px;
+    height: 606px;
+    position: absolute;
+    top:50px;
+    left:0;
+    background: orange;
+}
+#introduces .right ul li{
+    width: 189px;
+    height: 189px;
+    background: #fff;
+    float: left;
+    line-height: 189px;
+    text-align: center;
+    cursor: move;
+    margin:10px 0 0 10px;
+    /*border: 1px solid red;*/
+}
+
 /*个人简介和技能书区域结束*/
+
+
+
+
+
+
 
 
 /*默认的全局使用样式*/

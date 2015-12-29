@@ -58,17 +58,17 @@ document.onmouseover = function (e) {
     var broszhu = tar.getAttribute("broszhu");//监听的对象；
     if (broszhu === "true") {//以属性来判断；
         if (ch <= 200) {
-            move.call(navNav, 200);
+            tabMove.call(navNav, 200);
             navNav.style.display="block";
         }
     } else {
         if (ch > 0) {
-            move.call(navNav, 0);
+            tabMove.call(navNav, 0);
         }
     }
 };
 
-function move(target) {
+function tabMove(target) {
     var that = this;
     _move();
     function _move() {
@@ -144,7 +144,10 @@ oTab.onmouseenter = function (e) {
     var bigImg=document.createElement("img");
     bigImg.src="img/peony.jpg";
     bigImg.id="bigImg";
-    container.appendChild(bigImg);
+    var pBigImg=document.createElement("p");
+    pBigImg.innerHTML="<iframe src=\"\" style=\"width:800px;height:536px;top:0px;left:0px;position:absolute;visibility:inherit;z-index:-1;\" frameborder=0></iframe>"
+    pBigImg.appendChild(bigImg);
+    container.appendChild(pBigImg);
 
     //当鼠标移近来的时候，动态创建一个DIV元素，id是mark
     var mark = document.createElement("div");
@@ -272,3 +275,7 @@ plus.onclick=function(){
     flag.className="right-right flag";
 };
 //商品介绍区域结束
+
+//拖拽的效果开始
+
+//拖拽的效果结束
