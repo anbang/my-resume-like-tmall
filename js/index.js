@@ -277,5 +277,50 @@ plus.onclick=function(){
 //商品介绍区域结束
 
 //拖拽的效果开始
-
+//这里单开了一个JS文件夹，在drag里面
 //拖拽的效果结束
+
+//DEMO演示的页面
+var DEMO=document.getElementById("DEMO");
+var DEMOLis=DEMO.getElementsByTagName("li");
+for(var i= 0,len=DEMOLis.length;i<len;i++){
+    DEMOLis[i].index=dom.getElementsByClassName(DEMOLis[i],"hot_info")[0];
+    DEMOLis[i].onmouseover=function(){
+        this.index.style.display="block"
+    }
+    DEMOLis[i].onmouseout=function(){
+        this.index.style.display="none"
+    }
+}
+
+//公司历程的部分开始
+
+
+//根据我们的json数据，将html动态添加到页面中
+
+
+var menuBody=document.getElementById("menuBody");
+var menuChild=dom.getElementsByClassName(menuBody,"menu-child-body");
+var menuBodyH3=menuBody.getElementsByTagName("h3");
+var menuBodySpan=menuBody.getElementsByTagName("span");
+for(var i= 0,len=menuBodyH3.length;i<len;i++){
+    menuBodyH3[i].index=i;
+    menuBodyH3[i].onclick=function() {
+        menuChange(this.index);
+    }
+}
+//下面是工作经历的改变函数
+function menuChange(index){
+    for(var i=0;i<menuChild.length;i++){
+        menuBodySpan[i].className="bg2";
+        menuBodyH3[i].className="";
+        menuChild[i].className="menu-child-body";
+    }
+    menuBodySpan[index].className="bg1";
+    menuBodyH3[index].className="";
+    menuChild[index].className="menu-child-body select";
+    console.log(index);
+}
+
+
+//公司历程的部分结束

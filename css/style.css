@@ -1,6 +1,6 @@
 *{padding: 0;margin: 0}
 body{font-family: "微软雅黑", sans-serif;-webkit-user-select: none;}
-img{border: none}
+img{border: none;display: block}
 ul,li{
     list-style: none;
 }
@@ -521,6 +521,9 @@ ul,li{
     margin:10px 0 0 10px;
     display:inline;
 }
+#introduces .right ul li:hover{
+    background: #7cbaf8;
+}
 
 /*个人简介和技能书区域结束*/
 /*技能总结区域开始*/
@@ -591,7 +594,7 @@ ul,li{
     left: 0;
     width: 96px;
     height: 322px;
-    background: #3c3c3c;
+    background: #0099ff;
 }
 #skillsSummary .down .left p{
     position: absolute;
@@ -646,7 +649,7 @@ ul,li{
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 #skillsSummary .down .right li:hover p {
-    color: #259add;
+    color: #0099ff;
     -webkit-animation: moveTop 300ms ease-in-out ;
     -moz-animation: moveTop 300ms ease-in-out ;
     -ms-animation: moveTop 300ms ease-in-out ;
@@ -724,7 +727,7 @@ ul,li{
 /*技能总结区域结束*/
 
 /*作品展示区域开始*/
-#FEDEMO .demo-list{
+.demo-list {
     width: 1210px;
     height: 760px;
     background: #cccccc;
@@ -732,19 +735,110 @@ ul,li{
     top: 8px;
     left: 50%;
     margin-left: -605px;
+    margin-bottom: 15px;
 }
-#FEDEMO .demo-list li{
+.online{
+    width: 1210px;
+    height: 260px;
+}
+
+.demo-list li {
     position: relative;
     width: 230px;
     height: 240px;
     background: #FFF;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin: 10px 0 0 10px;
     float: left;
     display: inline;
-    overflow: hidden;
+}
+.demo-list li a {
+    color: #fff;
 }
 
+.demo-list li a .hot_info {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #0d9572;
+    filter: alpha(Opacity=80);
+    opacity: 0.8;
+    width: 230px;
+    height: 240px;
+    cursor: pointer;
+}
+
+.demo-list li a .hot_info h2 {
+    font-size: 20px;
+    margin: 6px 8px;
+    /*font-weight: normal;*/
+    text-align: center;
+    width: 214px;
+    height: 30px;
+    border-bottom: 5px solid #FFF;
+}
+.demo-list li a .hot_info p {
+    margin: 8px 13px;
+}
+/*工作经历区域开始*/
+#menu {
+    border-top: 2px solid #999;
+    border-bottom: 1px solid #dddddd;
+}
+#menu .menuTop {
+    background: #F7F7F7;
+    padding-left: 8px;
+    height: 50px;
+    line-height: 50px;
+}
+
+#menu .menu-child {
+    width: 100%;
+}
+
+#menu .menu-child h3 {
+    position: relative;
+    padding: 0 6px 0 36px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+#menu .menu-child h3 span {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+#menu .menu-child h3 span.bg1 {
+    background: #999;
+    background-position: -42px -28px;
+}
+
+#menu .menu-child h3 span.bg2 {
+    background: #dddddd;
+    background-position: -59px -28px;
+}
+#menu .menu-child .menu-child-body{
+    overflow: hidden;
+    border: 1px solid #dddddd;
+    border-top:none ;
+    height: 100px;
+    display: none;
+    padding: 10px 10px 30px 36px;
+}
+#menu .menu-child .select{
+    display: block;
+}
+#menu .menu-child .menu-child-body p{
+    font-size: 14px;
+}
+/*工作经历区域结束*/
 
 
 
@@ -795,6 +889,7 @@ a{
 /*兼容的居中布局*/
 .middle{
     position: relative;
+    width: 1210px;
     left: 50%;
     margin-left: -605px;
 }
@@ -813,7 +908,7 @@ a{
     position: relative;
     left: 50%;
     margin-left: -605px;
-    background: #cccccc;
+    background: #3c3c3c;
     color: #FFF;
-    font-size: 36px;
+    font-size: 30px;
 }
