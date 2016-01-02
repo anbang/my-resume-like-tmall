@@ -730,7 +730,7 @@ ul,li{
 .demo-list {
     width: 1210px;
     height: 760px;
-    background: #cccccc;
+    background: #dddddd;
     position: relative;
     top: 8px;
     left: 50%;
@@ -782,6 +782,8 @@ ul,li{
 }
 /*工作经历区域开始*/
 #menu {
+    position: relative;
+    margin-top: 50px;
     border-top: 2px solid #999;
     border-bottom: 1px solid #dddddd;
 }
@@ -840,7 +842,42 @@ ul,li{
 }
 /*工作经历区域结束*/
 
-
+/*自我评价区域开始*/
+#evaluation{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 300px;
+    background: #1f1f1f;
+}
+#evaluation .middle{
+    width: 1230px;
+    height: 280px;
+    position: relative;
+}
+#evaluation .middle li {
+    width: 390px;
+    height: 200px;
+    color: #FFF;
+    float: left;
+    margin-top: 50px;
+    margin-right: 18px;
+}
+#evaluation .middle li div{
+    position: relative;
+    top: 20px;
+}
+#evaluation .middle li a{
+    display: block;
+    margin-bottom: 10px;
+    color: #CCC;
+    cursor: pointer;
+    text-align:justify;
+}
+#evaluation .middle li a:hover{
+    color: #E58994;
+}
+/*自我评价区域结束*/
 
 
 

@@ -305,7 +305,7 @@ var menuBodyH3=menuBody.getElementsByTagName("h3");
 var menuBodySpan=menuBody.getElementsByTagName("span");
 for(var i= 0,len=menuBodyH3.length;i<len;i++){
     menuBodyH3[i].index=i;
-    menuBodyH3[i].onclick=function() {
+    menuBodyH3[i].onmouseover=function() {
         menuChange(this.index);
     }
 }
