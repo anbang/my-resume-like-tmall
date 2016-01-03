@@ -319,8 +319,6 @@ function menuChange(index){
     menuBodySpan[index].className="bg1";
     menuBodyH3[index].className="";
     menuChild[index].className="menu-child-body select";
-    console.log(index);
 }
-
 
 //公司历程的部分结束
