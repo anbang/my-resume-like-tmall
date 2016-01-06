@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我用原生JS写的一套电子商务风格的WEB前端简历，兼容到了IE56789，使用了优雅降级,按需加载等方案；分享给大家，欢迎star！</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+<!--头部区域开始-->
+<div id="header" class="middle">
+    <a href="#" class="logo"><img src="./img/logo.jpg" alt=""/></a>
+    <div class="explain" id="explain">
+        <a href="./img/onmouseover1.jpg" class="header-list list1"><img src="./img/shanghai.gif" alt=""/></a>
+        <a href="./img/onmouseover2.jpg" class="header-list list2"><img src="./img/qianduan.gif" alt=""/></a>
+        <a href="./img/onmouseover3.jpg" class="header-list list3"><img src="./img/gongzi.gif" alt=""/></a>
+    </div>
+    <a href="" class="phone-nub"><img src="./img/phoneNumber.gif" alt=""/></a>
+</div>
+<!--头部区域结束-->
+
+<!--导航条开始-->
+<div class="nav-background">
+    <div id="nav" class="middle">
+        <ul>
+            <li >首页</li>
+            <li ><a href="https://github.com/broszhu" target="_blank">GitHub</a></li>
+            <li broszhu="true"><a href="http://broszhu.com/" target="_blank" broszhu="true">个人博客</a></li>
+            <li id="contact">联系方式</li>
+        </ul>
+        <div id="nav-div2" broszhu="true">
+            <a href="http://broszhu.com/" target="_blank" broszhu="true">博客首页</a>
+            <a href="http://broszhu.com/%E5%89%8D%E7%AB%AFdemo" target="_blank" broszhu="true">前端DEMO</a>
+            <a href="https://www.baidu.com/" target="_blank" broszhu="true">后端DEMO</a>
+            <a href="http://broszhu.com/%E8%AE%BE%E8%AE%A1demo" target="_blank" broszhu="true">设计DEMO</a>
+            <a href="http://broszhu.com/%E8%BF%9C%E7%A8%8B%E8%BF%90%E8%90%A5%E6%96%87%E7%AB%A0" target="_blank" broszhu="true">运营DEMO</a>
+        </div>
+        <div id="contactInformation">
+            <a href="javascript:;" class="advice">博客：taobao.fm</a>
+            <a href="javascript:;" class="email">邮箱：ooxx@zhu.me</a>
+            <a href="javascript:;" class="phone">电话：180-0000-0000</a>
+        </div>
+    </div>
+</div>
+<!--导航条结束-->
+
+<!--商品展示区域开始-->
+<div id="myDisplay" class="middle">
+    <div class="left">
+        <ul id="displayHeader">
+            <li class="select"><img src="img/li1.jpg" alt=""/></li>
+            <li class=""><img src="img/li2.jpg" alt=""/></li>
+            <li class=""><img src="img/li3.jpg" alt=""/></li>
+            <li class=""><img src="img/li4.jpg" alt=""/></li>
+            <li class=""><img src="img/li5.jpg" alt=""/></li>
+        </ul>
+        <ul id="displayBody">
+            <li id="tab"  class="select">
+                <img src="img/smallPeony.jpg"  id="img1">
+<!--                <div id="container">
+                    <img src="img/peony.jpg" alt="" id="bigImg"/>
+                </div>
+                <div id="mark"></div>-->
+            </li>
+            <li class="" id="toMove2"><img src="img/myphoto2.jpg" alt="我的图片第2张"/></li>
+            <li class="" id="toMove3"><img src="img/myphoto3.jpg" alt="我的图片第3张"/></li>
+            <li class="" id="toMove4"><img src="img/myphoto4.jpg" alt="我的图片第4张"/></li>
+            <li class="" id="toMove5"><img src="img/myphoto5.jpg" alt="我的图片第5张"/></li>
+        </ul>
+    </div>
+    <div class="right">
+        <div class="title">
+            <p>WEB前端开发 JavaScript基础扎实 有nodejs开发经验 / 平面设计经验 / 电子商务运营经验</p>
+            <span>目标公司类型：电子商务型公司（平台型或第三方服务商） 或者 可以加速提高英语口语和阅读能力的公司</span>
+        </div>
+        <div class="price">
+            <p class="introduces mall-price">价格</p>
+            <div class="price-number">¥<b>12000.00</b></div>
+            <div id="rent" class="blue-font">
+                /每月租金
+                <a href="javascripy:;">?</a>
+            </div>
+            <div class="introduces xiaoxi1" id="xiaoxi1">此费用为商品的每月租金,使用时请按时续费。</div>
+            <div class="location">
+                <p class="introduces">商品所在地</p>
+                <p href="javascripy:;"  class="city">上海市 · 浦东新区</p>
+            </div>
+        </div>
+        <div class="deliver-goods">
+            <div class="one">
+                <p class="introduces">配送</p>
+                <div class="destination right-right">
+                    <div class="little-font">上海</div>
+                    <div class="introduces">至</div>
+                    <div class="province">
+                        <select id="province"></select>
+                        <select id="city"></select>
+                        <select id="area"></select>
+                    </div>
+                    <div class="little-font">有货</div>
+                    <div id="distributionTime" class="blue-font">
+                        /配送时间
+                        <a href="javascripy:;">?</a>
+                        <div class="introduces" id="xiaoxi2">约定时间发货，如有意外，会提前通知</div>
+                    </div>
+                </div>
+            </div>
+            <div class="two">
+                <a class="introduces">运费</a>
+                <div class="little-font right-right">免运费　(上海以外地区不发货)</div>
+            </div>
+        </div>
+        <div class="buy">
+            <div class="one">
+                <p class="introduces">属性</p>
+                <p class="web right-right">WEB前端开发 <img src="./img/dui.png" alt=""/></p>
+            </div>
+            <div class="two">
+                <p class="introduces">数量</p>
+                <div id="mallNum" class="right-right">
+                    <span class="reduce mallNumStyle">-</span>
+                    <span class="content">1</span>
+                    <span class="plus mallNumStyle">+</span>
+                </div>
+            </div>
+            <div class="three introduces">
+                <p class="introduces">备注</p>
+                <p class="right-right" id="flag">促销商品，仅一件，多拍不发货！</p>
+            </div>
+            <div class="four"></div>
+        </div>
+        <div class="buyNowdiv">
+            <a href="javascript:;" class="buyNow">立即购买</a>
+        </div>
+    </div>
+
+</div>
+<!--商品展示区域结束-->
+
+<!--第二个导航条区域开始-->
+<div id="twoNav" class="middle">
+    <a href="#twoNav" class="nav select">个人简介</a>
+    <a href="#skillsSummaryFlag" class="nav">技能总结</a>
+    <a href="#FEDEMOFlag" class="nav">前端演示</a>
+    <a href="#menu" class="nav">工作经历</a>
+    <div class="simple">
+        <div class="position introduces">
+            <span>朱安邦</span>
+            <span>WEB前端开发</span>
+        </div>
+        <div class="wage ">
+            <p class="introduces">¥</p>
+            <p class="price">12000</p>
+        </div>
+    </div>
+    <div class="buyNowdiv">
+        <a href="javascript:;" class="buyNow">立即购买</a>
+    </div>
+</div>
+<!--第二个导航条区域结束-->
+
+<!--个人简介和技能书区域开始-->
+<div id="introduces" class="middle">
+    <div class="left">
+        <img src="./img/chengxuyuan.png" alt="我是一名程序员" class="code-dog"/>
+        <img src="./img/information.png" alt="信息介绍" class="information"/>
+        <ul>
+            <li>
+                <div class="user"></div>
+                <p>朱安邦 / 男 / 1990年</p>
+            </li>
+            <li>
+                <div class="local"></div>
+                <p>上海市浦东新区（目前所在地）</p>
+            </li>
+            <li>
+                <div class="edu"></div>
+                <p>普招大专 / 学信号：1306 0120 1106 0008 22</p>
+            </li>
+            <li>
+                <div class="work"></div>
+                <p>2010年6月参加工作</p>
+            </li>
+            <li>
+                <div class="marry"></div>
+                <p>已婚</p>
+            </li>
+        </ul>
+        <a href="https://github.com/Broszhu" class="github select-github" target="_blank"></a>
+        <a href="http://broszhu.com/" class="blog select-blog" target="_blank"></a>
+    </div>
+    <div class="right">
+        <p>技能树/工具</p>
+        <ul id="photolist">
+            <li><img src="./img/skill/html.png"  alt="11"/></li>
+            <li><img src="./img/skill/css.png" alt=""/></li>
+            <li><img src="./img/skill/js.png" alt=""/></li>
+            <li><img src="./img/skill/jquery.png" alt=""/></li>
+            <li><img src="./img/skill/angular.png" alt=""/></li>
+            <li><img src="./img/skill/node.png" alt=""/></li>
+            <li><img src="./img/skill/ws.png" alt=""/></li>
+            <li><img src="./img/skill/ps.png" alt=""/></li>
+            <li><img src="./img/skill/git.png" alt=""/></li>
+        </ul>
+    </div>
+</div>
+<!--个人简介和技能书区域结束-->
+<!--个人技能总结区域开始-->
+<div id="skillsSummaryFlag" class="middle-clear-flag middle"></div>
+<div id="skillsSummaryBack">
+    <div id="skillsSummary" class="middle">
+        <div class="up">
+            <div class="left"><p>个人总结</p></div>
+            <ul class="right">
+                <li>掌握html，手写符合w3c标准的代码；用div+CSS布局常见页面，高度还原设计搞；</li>
+                <li>熟练处理IE6+及chrome浏览器的兼容性问题，CSS和JS代码可兼容至IE6；</li>
+                <li>熟练掌握JS继承模式的原理以及JS面向对象中的继承，封装，单例模式，工厂模式，原型模式；</li>
+                <li>有个人开发JS类库的经验；曾封装过DOM库，动画库，事件库，AJAX库；</li>
+                <li>掌握模块化开发的思路和原理，提高代码的复用性，可针对项目实际进行模块化开发，具备工程化的思维和实践经验；</li>
+                <li>JS基础扎实，掌握常用的插件以提高工作效率；可用原生JS封装针对特定逻辑的类库；不借助第三方类库和框架可进行项目开发；</li>
+                <li>熟练使用jQuery；研读过jQuery源码，不仅熟悉jQuery的使用，而且知道代码背后的逻辑和原理；</li>
+                <li>有使用AJAX技术与后台数据交互的经验，，根据接口文档和后台进行交互；</li>
+                <li>熟悉HTTP协议,了解浏览器和服务器交互机制</li>
+                <li>对Web前端技术有浓厚的兴趣，善用搜索引擎，较强的自学能力和对新技术的追求精神，乐于分享；</li>
+                <li>熟悉网站性能优化，优化Web加载、执行和渲染时间；</li>
+                <li>有AngulaJs开发单页应用经验；</li>
+                <li>有使用HTML5+CSS3进行移动端WEB页面的开发经验和案例；</li>
+                <li>使用git工具进行团队合作,使用npm，bower包管理工具</li>
+            </ul>
+        </div>
+        <div class="down">
+            <div class="left"><p>其它技能</p></div>
+            <ul class="right">
+                <li>
+                    <p>Node开发</p>
+                    <span>有运用Node.js开发项目的实战经验；(NodeJs是通过在QQ课堂报在线培训班学习的，项目是根据老师的讲义写出来的)</span>
+                </li>
+                <li>
+                    <p>平面设计</p>
+                    <span>对平面设计和网页设计有很深的理解，有日常工作中需要的设计能力，可以与设计师愉快的的玩耍和技术交流</span>
+                </li>
+                <li>
+                    <p>运营方面</p>
+                    <span>业务员/电商行业出身；发表的运营文章曾被多家网站转载；2012年底-2016年在电商行业创业，负责公司业务运营</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--个人技能总结区域结束-->
+
+<!--前端DEMO区域开始-->
+<div id="FEDEMOFlag" class="middle-clear-flag middle"></div>
+<div id="DEMO">
+    <div class="title-flag">前端作品演示</div>
+    <ul class="demo-list" id="FEDEMOList">
+        <li>
+            <a href="https://github.com/Broszhu/My-JavaScript-is-a-clover/tree/master/DOM/%E5%B0%81%E8%A3%85DOM%E5%BA%93" target="_blank">
+                <img src="img/FEdemo/FE/demo-list-1.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">DOM事件库</h2>
+                    <em></em>
+                    <p title="项目描述">主要对DOM的一些操作</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/Broszhu/My-JavaScript-is-a-clover/tree/master/DOM/%E5%8A%A8%E7%94%BB/%E5%B0%81%E8%A3%85%E5%8A%A8%E7%94%BB%E5%BA%93" target="_blank">
+                <img src="img/FEdemo/FE/demo-list-2.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">封装的动画库</h2>
+                    <em></em>
+                    <p title="项目描述">封装的动画库</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/Broszhu/My-JavaScript-is-a-clover/tree/master/DOM/%E4%BA%8B%E4%BB%B6/%E5%B0%81%E8%A3%85%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%BA%93" target="_blank">
+                <img src="img/FEdemo/FE/demo-list-3.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">封装的事件库</h2>
+                    <em></em>
+                    <p title="项目描述">封装的一个DOM事件库</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://broszhu.com/works/easy-counter/easy-counter.html" target="_blank">
+                <img src="img/FEdemo/FE/demo-list-4.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">苹果计算器</h2>
+                    <em></em>
+                    <p title="项目描述">一个简易的苹果计算器在线程序</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/Broszhu/douban" target="_blank">
+                <img src="img/FEdemo/FE/demo-list-5.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">仿豆瓣</h2>
+                    <em></em>
+                    <p title="项目描述">仿豆瓣网首页；兼容到IE6789</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://broszhu.com/works/Architecture/index.html" target="_blank">
+                <img src="img/FEdemo/FE/demo-list-6.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">建筑公司首页</h2>
+                    <em></em>
+                    <p title="项目描述">一个建筑公司的网站</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://broszhu.com/works/my-resume-like-tmall/index.html#" target="_blank">
+                <img src="img/FEdemo/FE/demo-list-7.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">电子商务版简历</h2>
+                    <em></em>
+                    <p title="项目描述">用原生JS实现的页面，没有借助任何框架，兼容到IE56789</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" target="_blank">
+                <img src="img/FEdemo/FE/demo-list.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">这个是标题</h2>
+                    <em></em>
+                    <p title="项目描述">这里是对本项目的描述</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" target="_blank">
+                <img src="img/FEdemo/FE/demo-list.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">这个是标题</h2>
+                    <em></em>
+                    <p title="项目描述">这里是对本项目的描述</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" target="_blank">
+                <img src="img/FEdemo/FE/demo-list.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">这个是标题</h2>
+                    <em></em>
+                    <p title="项目描述">这里是对本项目的描述</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://broszhu.com/works/youku2/list.html" target="_blank">
+                <img src="img/FEdemo/FE/demo-list-11.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">移动端下载站</h2>
+                    <em></em>
+                    <p title="项目描述">仿移动端下载网站的界面</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" target="_blank">
+                <img src="img/FEdemo/FE/demo-list.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">这个是标题</h2>
+                    <em></em>
+                    <p title="项目描述">这里是对本项目的描述</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" target="_blank">
+                <img src="img/FEdemo/FE/demo-list.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">这个是标题</h2>
+                    <em></em>
+                    <p title="项目描述">这里是对本项目的描述</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" target="_blank">
+                <img src="img/FEdemo/FE/demo-list.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">这个是标题</h2>
+                    <span></span>
+                    <p title="项目描述">这里是对本项目的描述</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" target="_blank">
+                <img src="img/FEdemo/FE/demo-list.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">这个是标题</h2>
+                    <em></em>
+                    <p title="项目描述">这里是对本项目的描述</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="title-flag">NodeJS作品</div>
+    <ul class="demo-list online" id="">
+        <li>
+            <a href="https://github.com/Broszhu/static-server" target="_blank">
+                <img src="img/FEdemo/node/demo-list2-1.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">静态文件服务器</h2>
+                    <em></em>
+                    <p title="项目描述">nodejs实现的一个静态文件服务器 1. 可能通过浏览器访问 2. 根目录/代表server.js所在的目录。 3. 访问根目录时可以列出根目录下所有的文件和文件夹。 4. 点击文件夹时进入下一级目录。 5. 点击文件则可以该文件。</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/Broszhu/zhuanbangBlog" target="_blank">
+                <img src="img/FEdemo/node/demo-list2-2.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">我的博客</h2>
+                    <em></em>
+                    <p title="项目描述">基于nodeJs和mogoDB的博客</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" target="_blank">
+                <img src="img/FEdemo/node/demo-list2.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">电商网站</h2>
+                    <em></em>
+                    <p title="项目描述">基于node的一个电商网站</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" target="_blank">
+                <img src="img/FEdemo/node/demo-list2.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">聊天室</h2>
+                    <em></em>
+                    <p title="项目描述">聊天室的项目</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" target="_blank">
+                <img src="img/FEdemo/node/demo-list2.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">漂流瓶</h2>
+                    <em></em>
+                    <p title="项目描述">一个类似于漂流瓶的小游戏</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="title-flag">平面设计作品</div>
+    <ul class="demo-list online" id="">
+        <li>
+            <a href="http://broszhu.com/archives/1155" target="_blank">
+                <img src="img/FEdemo/ps/demo-list3-1.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">蜂蜜软包装</h2>
+                    <em></em>
+                    <p title="项目描述">蜂蜜包装的软包装，挤压式，类似豆浆袋的那种</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://broszhu.com/archives/1718" target="_blank">
+                <img src="img/FEdemo/ps/demo-list3-2.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">蜂蜜瓶身标签</h2>
+                    <em></em>
+                    <p title="项目描述">多种蜂蜜的瓶身标签，考虑到成本，采用16.5X9.5的尺寸；1000张标签大概60元</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://broszhu.com/archives/1641" target="_blank">
+                <img src="img/FEdemo/ps/demo-list3-3.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">食品加工厂名片</h2>
+                    <em></em>
+                    <p title="项目描述">食品加工厂的名片设计，挑战多文字描述的排版;9.2X5.6的成品尺寸</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://broszhu.com/archives/1415" target="_blank">
+                <img src="img/FEdemo/ps/demo-list3-4.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">创意名片</h2>
+                    <em></em>
+                    <p title="项目描述">以自己域名为中心设计的一款创意工作室名片板式</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://broszhu.com/works/my-resume-like-tmall/index.html" target="_blank">
+                <img src="img/FEdemo/ps/demo-list3-5.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">电商简历</h2>
+                    <em></em>
+                    <p title="项目描述">一款类似电商平台销售的简历，求职者类似于商品</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="title-flag">电商运营的文章</div>
+    <ul class="demo-list online" id="">
+        <li>
+            <a href="http://bbs.paidai.com/topic/111033" target="_blank">
+                <img src="img/FEdemo/marketing/demo-list4.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">会员营销（上）</h2>
+                    <em></em>
+                    <p title="项目描述">以前写的关于会员营销的文章</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://bbs.paidai.com/topic/113022" target="_blank">
+                <img src="img/FEdemo/marketing/demo-list4-2.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">会员营销（中）</h2>
+                    <em></em>
+                    <p title="项目描述">以前写的关于会员营销的文章</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://bbs.paidai.com/topic/113924" target="_blank">
+                <img src="img/FEdemo/marketing/demo-list4-3.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">店铺构架</h2>
+                    <em></em>
+                    <p title="项目描述">一篇关于店铺页面构架的文章</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://broszhu.com/archives/472" target="_blank">
+                <img src="img/FEdemo/marketing/demo-list4-4.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">关于客单价</h2>
+                    <em></em>
+                    <p title="项目描述">一篇关于客单价的文章</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://broszhu.com/archives/417" target="_blank">
+                <img src="img/FEdemo/marketing/demo-list4-5.jpg">
+                <div class="hot_info">
+                    <h2 title="标题">重复购买率</h2>
+                    <em></em>
+                    <p title="项目描述">一篇关于重复购买率的文章</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<!--前端DEMO区域结束-->
+
+<!--工作经历区域开始-->
+<div id="menu" class="middle">
+    <div class="menuTop">
+        <h2>工作经历</h2>
+    </div>
+    <div id="menuBody" class="menuBody">
+        <div class="menu-child">
+            <h3><span class="bg1"></span>2012年12月--2016年</h3>
+            <div class="menu-child-body select">
+                <p>公司：宿松县力源蜂业有限责任公司</p>
+                <p>职位：自主创业</p>
+                <p>工作：负责公司的业务运营；</p>
+            </div>
+        </div>
+        <div class="menu-child">
+            <h3><span class="bg2"></span>2012年2月--2012年12月</h3>
+            <div class="menu-child-body">
+                <p>公司：杭州玛雅电子商务有限公司</p>
+                <p>职位：运营主管</p>
+                <p>工作：负责公司天猫店的日常运营工作；</p>
+            </div>
+        </div>
+        <div class="menu-child">
+            <h3><span class="bg2"></span>2010年6月--2012年2月</h3>
+            <div class="menu-child-body">
+                <p>公司：浙江华业不锈钢有限公司</p>
+                <p>职位：业务员</p>
+                <p>工作：把钢材销售到不锈钢制品厂和寻找中小型钢材代理商，属于传统行业的销售模式；</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--工作经历区域结束-->
+<!--自我总结区域-->
+<div id="evaluation">
+    <ul  class="middle">
+        <li>
+            <h3>职业素质</h3>
+            <div>
+                <a>态度+执行力是我学习和工作的追求，就不说那些团队意识，吃苦耐劳之类的套话了；如果工作中遇到棘手的事或者紧急项目，我不会找借口和拖进程，就算是加班到深夜，我也会先把事情给做好；假如项目中需要用到从未使用过的新技术/新框架，我相信我可以最快速度的用它来干活；对项目表现层和界面设计有非常浓厚的兴趣</a>
+            </div>
+
+        </li>
+        <li>
+            <h3>入职时间</h3>
+            <div>
+                <a>确定入职后，可随时到岗</a>
+            </div>
+        </li>
+        <li>
+            <h3>岗位期望</h3>
+            <div>
+                <a>全职WEB前端开发</a>
+                <a>电子商务型公司（平台型和第三方服务商均可）或者可以加速提高英语口语和阅读能力的公司</a>
+                <a>双休岗位，不接受单休(紧急项目上线时除外)</a>
+                <a>周一至周五可以接受高强度加班</a>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+
+
+</body>
+</html>
+<script src="js/dom.js"></script>
+<script src="js/jsAddress.js"></script>
+<script src="js/index.js"></script>
+<!-- 下面是拖拽的jS-->
+<script src="js/dragJs/event.js"></script>
+<script src="js/dragJs/drag.js"></script>
+<script src="js/dragJs/tween.js"></script>
+<script src="js/dragJs/index.js"></script>
