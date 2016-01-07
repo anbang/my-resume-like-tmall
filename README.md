@@ -7,6 +7,8 @@
 预览：
 ![](http://i.imgur.com/FnpYxFw.png)
 
+PSD设计稿在：[http://pan.baidu.com/s/1ntPl6Fv](http://pan.baidu.com/s/1ntPl6Fv)；修改文件方式可以在 PSCC 里面，先要设置，首选项>增效工具>启动生成器；并且在文件>生成>图像资源前打钩；在 PSD 所在的文件夹下会自动生成修改后的文件；可以直接修改； 这个仓库里也有单独模块的PSD文件，也可以在那里改
+
 测试环境
 
 - chrome
