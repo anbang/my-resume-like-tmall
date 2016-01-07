@@ -4,6 +4,8 @@
 
 预览的地址：[http://broszhu.com/works/my-resume-like-tmall/index.html](http://broszhu.com/works/my-resume-like-tmall/index.html)
 
+预览：
+![](http://i.imgur.com/FnpYxFw.png)
 
 测试环境
 
