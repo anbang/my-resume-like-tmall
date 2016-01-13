@@ -2,7 +2,7 @@
 ###原生JS+HTML+CSS，没有用任何框架
 ###兼容到IE56789，全兼容，优雅降低方案
 
-预览的地址：[http://broszhu.com/works/my-resume-like-tmall/index.html](http://broszhu.com/works/my-resume-like-tmall/index.html)
+预览的地址：[http://taobao.fm/works/my-resume-like-tmall/index.html](http://taobao.fm/works/my-resume-like-tmall/index.html)
 
 预览：
 ![](http://i.imgur.com/FnpYxFw.png)
