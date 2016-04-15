@@ -20,7 +20,7 @@
 - 项目中有做常见电子商务中的放大镜效果，图片拖拽效果等； 
 
 ####2、 我封装的类库
- - DOM库：[在线地址](https://github.com/Broszhu/My-JavaScript-is-a-clover/tree/master/DOM/封装DOM库)
+- DOM库：[在线地址](https://github.com/Broszhu/My-JavaScript-is-a-clover/tree/master/DOM/封装DOM库)
 - 动画库：[在线地址](https://github.com/Broszhu/My-JavaScript-is-a-clover/tree/master/DOM/动画/封装动画库)
 - 事件库：[在线地址](https://github.com/Broszhu/My-JavaScript-is-a-clover/tree/master/DOM/事件/封装的事件库)
 - 模仿jQuer封装的类库；用的是构造函数+原型继承封装的；
