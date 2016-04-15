@@ -18,21 +18,25 @@
 - 兼容到IE5、IE678910和标准浏览器；
 - 优雅降级方案，项目中用的类库是自己封装的；
 - 项目中有做常见电子商务中的放大镜效果，图片拖拽效果等； 
+
 ####2、 我封装的类库
  - DOM库：[在线地址](https://github.com/Broszhu/My-JavaScript-is-a-clover/tree/master/DOM/封装DOM库)
 - 动画库：[在线地址](https://github.com/Broszhu/My-JavaScript-is-a-clover/tree/master/DOM/动画/封装动画库)
 - 事件库：[在线地址](https://github.com/Broszhu/My-JavaScript-is-a-clover/tree/master/DOM/事件/封装的事件库)
 - 模仿jQuer封装的类库；用的是构造函数+原型继承封装的；
+
 ####3、移动端的下载站
 - 在线地址：[http://taobao.fm/works/youku2/list.html](http://taobao.fm/works/youku2/list.html)
 - 描述：	用HTML5+CSS3+zepto做的移动端页面； 
+
 ####4、nodeJs做的博客站
 - github仓库：[https://github.com/Broszhu/zhuanbangBlog](https://github.com/Broszhu/zhuanbangBlog)
 - 描述：用nodeJs配合bootstrap、mongoDB；是跟着网上的教程做的； 
+
 ####5、用photoshop设计的一款平面作品；
 - 描述：用是photoshop做的，[在线演示地址](http://taobao.fm/archives/1155)
 
-	###更多总结，请移步我的博客
+###更多总结，请移步我的博客
 
 ##技术记录地址：
  - 个人博客：[taobao.fm](http://taobao.fm/)  （[前端作品归类](http://taobao.fm/前端demo)，[设计作品归类](http://taobao.fm/设计demo)）
